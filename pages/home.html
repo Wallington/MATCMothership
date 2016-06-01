@@ -1,0 +1,49 @@
+<div layout="row" layout-align="center center" class="topBox">
+	<div ng-controller="homeCarousel">
+    	<uib-carousel interval="5000" no-wrap="false">
+        	<uib-slide ng-repeat="slide in slides track by $index" index="$index">
+            	<img ng-src="{{slide}}" class="img-responsive" style="margin: auto;" />
+            </uib-slide>
+        </uib-carousel>
+    </div>
+</div>
+
+<div layout="row" layout-align="center center" class="bottomBox" layout-sm="column" layout-xs="column">
+	<div layout="column" class="margin-5-right" hide-xs hide-sm>
+		<a href="https://www.twitch.tv/visionsofzosimos/profile/highlights" target="_blank"> <img src="images/twitchbutton.png"> </a>
+		<a href="http://www.forums.visionsofzosimos.net" target="_blank"><img src="images/forumbutton.png"></a>
+		<a href="#/media#wallpaper" target="_blank"><img src="images/wallpaperbutton.png"></a>
+	</div>
+	<div>
+		<iframe width="699" height="393" src="https://www.youtube.com/embed/X7g1DvtfX4s?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<div class="textBackground" id="survey">
+    	<div ng-class="server.colorCode">{{server.message}}</div>
+    	<form name="surveyForm" novalidate ng-submit="Submit(surveyForm)" >
+    	<h4 class="md-subhead text-center">
+        	{{survey.question}}
+        </h4>
+        <div layout="column" layout-align="start start">
+            <md-radio-group ng-model="survey.answer">
+                    <md-radio-button ng-repeat="choice in survey.choiceList" ng-value="choice" class="md-primary">
+                        {{choice}}
+                   </md-radio-button>
+            </md-radio-group>
+        </div>
+        <md-input-container class="md-block">
+        	<label>Please Enter Your Email</label>
+            <input required ng-model="survey.email" name="email" type="email" ng-pattern="/^.+@.+\..+$/"  ng-minlength="10" maxlength="100" >
+       		<div ng-messages="surveyForm.email.$error" role="alert">
+            	<div ng-message="required">This is required.</div>
+                <div ng-message="minlength">This email address need be 10 characters or longer.</div>
+                <div ng-message="maxlength">This email address need be lower then 100 characters.</div>
+                <div ng-message="pattern">This email address need look like email address.</div>
+            </div>
+        </md-input-container>
+        <label class="label label-info">Forever Interactive will never send you spam</label>
+        <md-button type="submit" class="md-button md-raised md-primary" alt="send feedback">
+            Send Feedback
+        </md-button>
+        </form>
+    </div>
+</div> 

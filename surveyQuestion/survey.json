@@ -1,0 +1,71 @@
+[
+	{
+		"question" : "What would you like to see more of out of the VoZ Development Team?",
+		"questionChoices"  :
+		[
+			"Walk throughs and Tutorial videos",
+			"New Elements",
+			"Updates and news on upcoming changes",
+			"Other"
+		]
+	},
+	{
+		"question" : "What is your favorite realm?",
+		"questionChoices" : 
+		[
+			"Dark",
+			"Light",
+			"Fulcrum",
+			"Both"
+		]
+	},
+	{
+		"question" : "What is your favorite type of card to play against an opponent?",
+		"questionChoices" : 
+		[
+			"Minion Cards",
+			"Ambush Cards",
+			"Glyph Cards",
+			"Spell Cards"
+		]
+	},
+	{
+		"question" : "How did you hear about VoZ?",
+		"questionChoices" : 
+		[
+			"Social Media",
+			"Online",
+			"Convention",
+			"Other"
+		]
+	},
+	{
+		"question" : "What was the reason that made you decide to download VoZ?",
+		"questionChoices" : 
+		[
+			"The gameplay looks fun/exciting/ or interesting to me.",
+			"The art/music is impressive.",
+			"I like MMO/CCG games and wanted to try VoZ.",
+			"It's Free-To-Play."
+		]
+	},
+	{
+		"question" : "Would you recommend VoZ to a friend?",
+		"questionChoices" : 
+		[
+			"Yes",
+			"No",
+			"Haven&rsquo;t Played Yet"
+		]
+	},
+	{
+		"question" : "What is your favorite Element in VoZ?",
+		"questionChoices" : 
+		[
+			"Fire",
+			"Earth",
+			"Air",
+			"Void"
+		]
+	}
+]

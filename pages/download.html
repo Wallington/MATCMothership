@@ -1,0 +1,54 @@
+<div layout="row" layout-align="center center">
+	<div ng-class="min">                      
+            <div> 
+                	<img src="images/HouseGuardBanner.jpg" id="fireWarror" class="img-responsive">
+            </div>
+            
+	</div>
+</div>
+<br/>
+<div layout="column" >
+
+	<div class="textBackground" flex="100">
+        <div layout="row" layout-align="space-around stretch" id="download">
+            <div flex="50">
+            	<h3 class="md-headline">Request Alpha Key</h3>
+                <form name="alphaKeyForm" novalidate ng-submit="Submit(alphaKeyForm)">
+                	<div ng-show="showMessage" ng-class="serverFeedback">{{serverMesage}}</div>
+                    <md-input-container class="md-block" flex-gt-sm>
+                    	<label>Your Full Name:</label>
+                        <input ng-model="request.name"  ng-minlength="5" name="name"  required alt="full name input">
+                        <div ng-messages="alphaKeyForm.name.$error">
+                        	<div ng-message="required">This is required.</div>
+                            <div ng-message="minlength">We need the full name. More than 5 characters long.</div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                    	<label>Your Email:</label>
+                        <input type="email" ng-model="request.email" ng-minlength="10" maxlength="100" name="email" alt="email input" required ng-pattern="/^.+@.+\..+$/">
+                        <div ng-messages="alphaKeyForm.email.$error" role="alert">
+                             <div ng-message-exp="['required', 'pattern', 'minlength', 'maxlength']">
+                                Your email must look like an e-mail address. Also must between 10 to 100 characters long.
+                            </div>
+                            
+                       	</div>
+                    </md-input-container>
+                    
+                    <md-button type="submit" class="md-button md-raised md-primary" alt="request alpha key">
+                    	Requst Key
+                    </md-button>
+                </form>
+            </div>
+            <div flex="50">
+            	<h3 class="md-headline">Why the Request</h3>
+                <p>
+                	If you would like to help play test Visions of Zosimos as we move towards a Beta state, please email us to receive a copy of the game today! When you receive your game key in the email, you will need to follow the instructions on how to download the game. 
+                </p>
+                <div class="alert alert-info"><b><div class="text-center">***IMPORTANT***</div>Please note to check your <b>Spam folder if you requested a game key and did not receive one.</b></div>
+            </div>	
+        </div>
+        
+    </div>
+	
+</div>
+

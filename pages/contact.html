@@ -1,0 +1,275 @@
+<div id="top">                           
+    <div > 
+       	<img src="images/paladin.jpg" id="fireWarror" class="img-responsive">
+    </div>
+            
+</div>
+
+<section id="email">
+<div class="panel panel-voz-default" >
+	<div class="panel-heading">
+		<h3 class="md-headline panel-title">Email</h3>
+	</div>
+    <div class="panel-body" layout="row">
+    	<div flex>
+        	<img src="images/about/email_banner.png" class=" pull-left img-rounded">
+        </div>
+        <div>
+        	<md-button class="md-button md-raised md-primary" ng-click="OpenEmailModel()">
+                Email
+            </md-button>
+        </div>
+        
+    </div>
+</div>
+</section>
+<section id="partners">
+<div class="panel panel-voz-default"  >
+	<div class="panel-heading">
+		<h3 class="md-headline panel-title">Partners</h3>
+	</div>
+    <div class="panel-body" layout="row">
+         
+             <div>
+             	<md-button class="md-button md-raised md-primary" ng-click="OpenPartnerModel()">
+                    Requesting for a Partnership
+                </md-button>
+             </div>
+             <div>
+             	
+             </div>
+             <div>
+            	<img src="images/about/partners_banner.png" class=" pull-right img-rounded">
+            </div>          
+    </div>
+</div>
+</section>
+
+<section id="faq">
+<div class="panel panel-voz-default" >
+	<div class="panel-heading">
+		<h3 class="md-headline panel-title">FAQ</h3>
+	</div>
+    <div class="panel-body" >
+        <img src="images/about/faq_banner.png" class=" pull-left img-rounded">
+        
+        <div layout="column" layout-align="center center">
+        	<div class="panel panel-voz-default">
+            	<div class="panel-heading">
+                	<p class="md-headline text-center">General Questions About Visions of Zosimos</p>
+                </div>
+                <div class="panel-body">
+                	<md-list>
+                        <md-list-item><a href="#/contact#faq1" class="">What is this game?</strong></a></md-list-item>
+                        <md-list-item><a href="#/contact#faq2" class="">Which operating systems run VoZ?  What game engine do we use?</a></md-list-item>
+                        <md-list-item><a href="#/contact#faq3" class="">Is there a physical version of the game?</a></md-list-item>
+                        <md-list-item><a href="#/contact#faq4" class="">Do I have to pay to get the good stuff?</a></md-list-item>
+                        <md-list-item><a href="#/contact#faq5" class="">How do I play? Where can I get an Alpha Key?</a></md-list-item>
+                    </md-list>     
+                </div>
+            </div>
+        </div>
+        
+        <div layout="column" layout-align="center start" id="faq1">
+        	<div class="panel panel-voz-default">
+            	<div class="panel-heading">
+                	<p class="md-title">What is this game?</p>
+                </div>
+                <div class="panel-body">
+                	<p>
+                    	Visions of Zosimos is a game that combines a collectible card game and turn-based tactical tabletop wargame while also harnessing the social aspects of a massively multi-player online game. The story brings players in as students of the mystic traditions of Hermetic Alchemy and Gnosticism; their actions will discover the hidden secrets of our world while battling for the fate of our universe.
+                    </p>     
+                </div>
+            </div>
+        </div>
+        
+        <div layout="column" layout-align="center start" id="faq2">
+        	<div class="panel panel-voz-default">
+            	<div class="panel-heading">
+                	<p class="md-title">Which operating systems run VoZ? What game engine do we use?</p>
+                </div>
+                <div class="panel-body">
+                	<p>
+                    	As of right now, VoZ is available for Windows only. For now, we don’t support Mac or Linux. The game engine we use is HeroEngine.
+                    </p>     
+                </div>
+            </div>
+        </div>
+        
+        <div layout="column" layout-align="center start" id="faq3">
+        	<div class="panel panel-voz-default">
+            	<div class="panel-heading">
+                	<p class="md-title">Is there a physical version of the game?</p>
+                </div>
+                <div class="panel-body">
+                	<p>
+                    	Not at this time, but we do prototyping with physical cards and hex maps from time to time to test new cards. We’re looking into the viability of printing physical cards, either for promotions or as a stand-alone version of the game.
+                    </p>     
+                </div>
+            </div>
+        </div>
+        
+        <div layout="column" layout-align="center start" id="faq4">
+        	<div class="panel panel-voz-default">
+            	<div class="panel-heading">
+                	<p class="md-title">Do I have to pay to get the good stuff?</p>
+                </div>
+                <div class="panel-body">
+                	<p>
+                    	<b>No!</b> Paying can expand the different types of cards at your disposal, but we’ve worked hard to make sure that the free cards are just as good and can hold their own in any match. In fact, there are some things that you can only do with free card sets that you can’t do with paid sets!
+                    </p>     
+                </div>
+            </div>
+        </div>
+        
+        <div layout="column" layout-align="center start" id="faq5">
+        	<div class="panel panel-voz-default">
+            	<div class="panel-heading">
+                	<p class="md-title">How do I play? Where can I get an Alpha Key?</p>
+                </div>
+                <div class="panel-body">
+                	<p>
+                    	Send an email to contact@foreverinteractive.com to request an Alpha Key. While you’re downloading the game, make sure to check out our tutorials on YouTube, or read through our Alpha Prototype tutorial!
+                    </p>     
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</section>
+
+<section id="bottomBuffer"></section>
+
+<script type="text/ng-template" id="emailModal.html">
+  <form id="emailForm" name="emailForm" novalidate ng-submit="Submit(emailForm)">
+  <div class="modal-body" id="emailOption">
+	  <div flex flex-gt-sm>
+            
+                <div ng-show="showMessage" ng-class="serverFeedback">{{serverMessage}}</div>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Your Full Name:</label>
+                    <input ng-model="email.name"  ng-minlength="5" name="name"  required alt="full name input">
+                    <div ng-messages="emailForm.name.$error">
+                        <div ng-message="required">This is required.</div>
+                        <div ng-message="minlength">We need the full name. More than 5 characters long.</div>
+                    </div>
+                </md-input-container>
+                
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Your Email:</label>
+                    <input type="email" ng-model="email.email" ng-minlength="10" maxlength="100" name="email" alt="email input" required ng-pattern="/^.+@.+\..+$/">
+                    <div ng-messages="emailForm.email.$error" role="alert">
+                         <div ng-message-exp="['required', 'pattern', 'minlength', 'maxlength']">
+                            Your email must look like an e-mail address. Also must between 10 to 100 characters long.
+                        </div>
+                        
+                    </div>
+                </md-input-container>
+                
+         		<md-input-container class="md-block" flex-gt-sm>
+                    <label>Subject:</label>
+                    <input type="text" ng-model="email.subject" name="subject" alt="Subject input" required >
+                    <div ng-messages="emailForm.subject.$error" role="alert">
+                          <div ng-message="required">This is required.</div>
+                    </div>
+                </md-input-container>
+                
+                
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Message: </label>
+                   <textarea ng-model="email.message" md-maxlength="200" md-select-on-focus required>
+                   </textarea>
+				   <div ng-messages="emailForm.message.$error" role="alert">
+                          <div ng-message="required">This is required.</div>
+                    </div>
+                </md-input-container>
+                
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>What does {{serverCodeA}} + {{serverCodeB}} add up to?</label>
+                    <input name="number" required ng-model="email.code" required />
+                    <div ng-messages="emailForm.code.$error" ng-show="feedback">
+                        <div ng-message="required">This is required.</div>
+                        <div ng-show="feedback">Oops Logic Error, Try Again.</div>
+                    </div>
+                </md-input-container>
+                
+                
+            
+        </div>
+  </div>
+  <div id="emailFooter" class="modal-footer">
+	 <md-button ng-click="Cancel()" class="md-button md-raised md-primary">
+	 		Cancel
+	 </md-button>
+	 <md-button type="submit" ng-disabled="disableSend" class="md-button md-raised md-primary" alt="contact me">
+		Send Email
+	</md-button>
+	</form>
+  </div>
+</script>
+
+<script type="text/ng-template" id="partnerModal.html">
+  <form id="partnerForm" name="partnerForm" novalidate ng-submit="Submit(partnerForm)">
+  <div class="modal-body" id="partner">
+	  <div flex flex-gt-sm>
+            
+                <div ng-show="showMessage" ng-class="partnerServerFeedback">{{partnerServerMessage}}</div>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Your Full Name:</label>
+                    <input ng-model="partner.name"  ng-minlength="5" name="name"  required alt="full name input">
+                    <div ng-messages="partnerForm.name.$error">
+                        <div ng-message="required">This is required.</div>
+                        <div ng-message="minlength">We need the full name. More than 5 characters long.</div>
+                    </div>
+                </md-input-container>
+                
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Your Email:</label>
+                    <input type="email" ng-model="partner.email" ng-minlength="10" maxlength="100" name="email" alt="email input" required ng-pattern="/^.+@.+\..+$/">
+                    <div ng-messages="partnerForm.email.$error" role="alert">
+                         <div ng-message-exp="['required', 'pattern', 'minlength', 'maxlength']">
+                            Your email must look like an e-mail address. Also must between 10 to 100 characters long.
+                        </div>
+                        
+                    </div>
+                </md-input-container>
+                
+         		<md-input-container class="md-block" flex-gt-sm>
+                    <label>Subject:</label>
+                    <input type="text" ng-model="partner.subject" name="subject" alt="Subject input" ng-disabled="true" >
+                    <div ng-messages="partnerForm.subject.$error" role="alert">
+                          <div ng-message="required">This is required.</div>
+                    </div>
+                </md-input-container>
+                
+                
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Message: </label>
+                   <textarea ng-model="partner.messsage" md-maxlength="200" md-select-on-focus>
+                   </textarea>
+                </md-input-container>
+                
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>What does {{serverCodeA}} + {{serverCodeB}} add up to?</label>
+                    <input name="number" required ng-model="partner.code" required />
+                    <div ng-messages="partnerForm.code.$error" ng-show="feedback">
+                        <div ng-message="required">This is required.</div>
+                        <div ng-show="feedback">Oops Logic Error, Try Again.</div>
+                    </div>
+                </md-input-container>
+                
+                
+            
+        </div>
+  </div>
+  <div id="partnerFooter" class="modal-footer">
+	 <md-button ng-click="Cancel()" class="md-button md-raised md-primary">
+	 		Cancel
+	 </md-button>
+	 <md-button type="submit" ng-disabled="disableSend" class="md-button md-raised md-primary" alt="contact me">
+		Send Request
+	</md-button>
+	</form>
+  </div>
+</script>

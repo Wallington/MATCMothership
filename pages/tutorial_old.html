@@ -1,0 +1,38 @@
+<div layout="row" layout-align="center center">
+	<a ng-href="#/download">
+    <div ng-class="min">
+         <br/>
+            <div id="textOnBanner">
+				<h1 class="md-display-2" show-xl hide-lg hide-md hide-sm hide-xs><b class="goldText">Click Banner</b><span class="silverText">, Requst an<br /> Alpha Key Now and Start Playing</span></h1>
+				<h2 class="md-display-1" hide-xl show-lg hide-md hide-sm hide-xs><b class="goldText">Click Banner</b><span class="silverText">, Requst an<br /> Alpha Key Now and Start Playing</span></span></h2>
+				<h2 class="md-headline" hide-xl hide-lg show-md hide-sm hide-xs><b class="goldText">Click Banner</b><span class="silverText">,Requst an<br /> Alpha Key Now and Start Playing</span></span></h2>
+				<h4 class="md-title" hide-xl hide-lg hide-md show-sm hide-xs><b class="goldText">Click Banner</b><span class="silverText">,Requst an<br /> Alpha Key Now and Start Playing</span></span></h4>
+                    
+            </div>
+                            
+            <div hide-sm hide-xs show-xl show-lg show-md> 
+                	<img src="images/fire-warrior.jpg" id="fireWarror" class="">
+            </div>
+            <div show-sm hide-xs hide-md hide-xl hide-lg> 
+                	<img src="images/Eldjatnor-Splash.jpg" id="Eldjatnor" class="">
+            </div>
+            <div hide-sm show-xs hide-xl hide-lg hide-md layout="row" layout-align="center center" flex="100">
+                <md-button class="md-button md-raised md-accent">
+					<b class="goldText">Click Here</b><span class="silverText">, Requst an<br /> Alpha Key Now and Start Playing</span>
+                </md-button>
+			</div>
+	</div>
+    </a>
+</div>
+<div layout="column" layout-align="center start">
+    
+   	<div id="book" style="width:{{Width()}},height:{{Height()}}" ng-mousedown="mouseDownHandler($event)" ng-mousemove="mouseMoveHandler($event)" ng-mouseup="mouseMoveHandler($event)" ng-css="{{bookPage.css}}">
+    	<canvas id="pageflip-canvas"  ></canvas>
+    	
+        <s class="pages" ng-repeat="bookPage in bookPages" style="z-index: {{bookPage.length - $index}}">
+            <img ng-src="{{bookPage.leftPage}}"/>
+            <img ng-src="{{bookPage.rightPage}}"/>
+        </s>
+    </div>
+       
+</div>

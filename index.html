@@ -1,0 +1,152 @@
+<!doctype html>
+<html ng-app="vozApp">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visions of Zosimos</title>
+
+
+<!-- CSS links-->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="css/angular-material.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" />
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+    
+    
+</head>
+
+<body ng-controller="mainController" >
+	<div  layout="column" layout-fill>
+		<div layout="row" layout-align="start center" id="header">
+            <img src="images/VoZ_Logo.png" class="img-responsive">
+            <md-button class="md-button md-raised vozPlay" ng-href="#/download">
+				PLAY FREE!
+			</md-button>
+			<div flex></div>
+            
+            <div id="nav">
+                <div hide-gt-md show-lg show-xl hide-sm hide-xs layout="row" layout-align="center center">
+                    <md-button class="md-button md-raised md-primary" ng-href="#/">
+                        Home
+                    </md-button> 
+                    <md-button ng-repeat="menu in menuList" class="md-button md-raised md-primary" ng-disabled="menu.disable" ng-click="GoToTop()" ng-href="{{menu.url}}">
+                          {{menu.name}}
+                    </md-button>
+                    <md-button class="md-button md-raised md-primary" ng-href="#/founder">
+                        Founders
+                    </md-button>
+                    
+                </div>
+                <md-button class="md-icon-button md-primary" hide-gt-sm ng-click="ToggleLeft()">
+                    <md-icon><i class="fa iconSize fa-bars "></i></md-icon>
+                    <md-tooltip  md-direction="bottom">
+                		Navagate
+                	</md-tooltip>
+                </md-button>
+                
+            </div>
+            
+            <div>
+                <md-button class="md-icon-button md-primary" ng-click="ToggleRight()" >
+                    <md-icon><i class="fa iconSize  fa-share-alt-square "></i></md-icon>
+                    <md-tooltip md-direction="bottom">
+                      Share
+                    </md-tooltip>
+                </md-button>
+            </div> 
+            
+        </div>
+		<div hide-xs><p class="md-title goldText margin-150-left">
+        	STRATEGIC MMOCCG
+        </p></div>
+        <div layout="row" layout-align="center center" layout-xs="column" id="underNav" layout-wrap >
+				
+                <md-button class="md-button md-primary" ng-repeat="subMenu in subMenuList" ng-click="GoToAch(subMenu.achLink);" ng-href="{{subMenu.href}}" >{{subMenu.name}}</md-button>
+          </div>
+          <md-content>
+             <div ng-view layout="column"><!-- where pages will spawn in -->
+                 
+             </div>
+          </md-content>
+		  <footer>
+				<div layout="row" layout-align="center center" >
+					<div class="footerLink">
+						<a href="#"> EULA</a>
+					</div>
+					<div class="footerLink">
+						<a href="#"> Tearm of Service </a>
+					</div>
+					<div class="footerLink">
+						<a href="#/support"> Support </a>
+					</div>
+					<div class="footerLink">
+						<a href="#"> CoPPA </a>
+					</div>
+					<div class="footerLink">
+						<a href="#"> Privacy Policy </a>
+					</div>
+					<div class="footerLink">
+						<a href="#/contact"> Contacts </a>
+					</div>
+				</div>
+		  </footer>
+    </div>
+    <md-sidenav class="md-sidenav-left sidenav-left" md-component-id="left">
+        <div layout="column" layout-align="center center" >
+        	<img src="images/VoZ_Logo.png">
+            <md-button class="md-button md-raised md-primary buttonWidth" ng-href="#/">
+                Home
+            </md-button> 
+            <md-button ng-repeat="menu in menuList" class="md-button md-raised md-primary buttonWidth" ng-href="{{menu.url}}">
+                  {{menu.name}}
+            </md-button>
+            <md-button class="md-button md-raised md-primary buttonWidth" ng-href="#/founder" >
+                Founders
+            </md-button>
+            <br />
+            <div layout="row">
+            	<md-button class="md-icon-button" ng-repeat="social in socialList" ng-click="Tab(social.url)">
+                    <i class="{{social.icon}} iconSize"></i><br/>
+                    <md-tooltip>{{social.name}}</md-tooltip>
+              	</md-button>
+            </div>
+        </div>
+    </md-sidenav>
+    <md-sidenav class="md-sidenav-right sidenav-right" md-component-id="right">
+       	 <div layout="column" layout-align="center center" >
+              <img src="images/VoZ_Logo.png">
+              <md-button class="md-button" ng-repeat="social in socialList" ng-click="Tab(social.url)">
+                    <i class="{{social.icon}} iconSize"></i>
+                    <span> {{social.name}}</span>
+              </md-button>
+          </div>
+    </md-sidenav>
+   <!-- Global Javascript Links -->
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
+   
+
+   <!-- Angular Material Library -->
+   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+
+  <script src="scripts/jquery-1.12.3.min.js"></script>
+   <script src="scripts/turn.js"></script>
+   <script src="scripts/app.js"></script>
+   <script src="scripts/ui-bootstrap.js"></script>
+   
+   <!-- GoogleAnalytics -->
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-41792223-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+</html>

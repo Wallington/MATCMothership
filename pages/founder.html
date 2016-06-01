@@ -1,0 +1,322 @@
+
+<div id="top">
+  
+    <img src="images/GolemBanner.jpg" id="fireWarror" class="img-responsive">
+</div>
+
+<div layout="row" layout-align="end end">
+	
+    <div flex></div>
+    <div>
+        <md-card class="storeCards">
+            
+            <md-card-content>
+               
+               <md-button class="md-button" ng-click="ToggleCart()" ng-disabled="true">
+                    <i class="fa fa-shopping-basket fa-2x"></i>
+                    {{itemCounter}} items
+               </md-button>
+               <md-button class="md-button " ng-click="CheckOut()" ng-disabled="true">
+                    <i class="fa fa-shopping-bag fa-2x"></i>
+                    Check Out
+               </md-button> 
+            </md-card-content>
+        </md-card>
+     </div>
+</div>
+
+<div layout="row" layout-xs="column"  layout-wrap id="store:main" >
+	<div flex="33" flex-xs="100" ng-repeat="teir in tiers">
+    	<md-card class="storeCards">
+        	<md-card-content>
+            	<div layout="column" layout-align="center center">
+                    <p>${{teir.price}} USD for</p>
+                    <img ng-src="{{teir.teirImage}}" alt="{{teir.teirName}} badge" class="badgeIcon" />
+                    <h3 class="md-display-1">{{teir.levelName}}</h3>
+                    <p class="md-subhead">{{teir.teirGiftsIntro}}</p>
+                    <div layout="row" layout-align="center center">
+                        <md-button aria-label="More Detail" ng-click="ToggleDetail($index)">
+                            More Detail
+                        </md-button>
+                        <md-button class="md-button" ng-disabled="true" aria-label="Add to Shopping Cart" ng-click="AddToCart(teir.levelName,teir.price, teir.teirName )">
+                            Add To Cart
+                        </md-button>
+                    </div>
+                </div>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>
+
+<div layout="column"   layout-wrap id="store:upgrade" >
+	<div class="panel panel-voz-default">
+    	<div class="panel-heading">
+        	<h3>Founder Store: Upgrade Your Founder Packages</h3>
+        </div>
+        <div class="panel-body">
+        	<h3>Comming Soon!</h3>
+        </div>
+    </div>
+</div>
+
+<div layout="column"   layout-wrap id="store:faq" >
+	<div class="panel panel-voz-default">
+    	<div class="panel-heading">
+        	<h3>Founder Store: FAQ's</h3>
+        </div>
+        <div class="panel-body">
+        	<h3>Can I purchase if I am outside of the United States?</h3>
+            <p>Yes, however, understand that we are a small team with little funding at this time. As such, we do not have plans to localize VoZ to formats external to the United States at this time. While this may change in the future, if you cannot read English, then please understand that you may not get a version of VoZ that is in your native language.</p>
+            <p>Founder Store will be able accept payment from <a href="https://www.paypal.com/us/webapps/mpp/country-worldwide" target="_blank">Click Here</a>
+            
+            <h3>Will there be formats other than PC/Windows?</h3>
+            <p>Due to the contracts and constraints of the Hero Engine and our current financial situation, we cannot afford to obtain source code access to the Hero Engine. While this may change in the future, at this time, we only plan to release VoZ on Windows/PC machines.</p>
+            
+            <h3>Where can I go to discuss/share my idea(s)?</h3>
+            <p>We at FI practice Open Door, Agile Software Development and attempt to get early customer engagement at every possible moment. As such, we love to hear questions, comments, concerns, criticism, etc... from the community. You may share any of this with us at our email: <a href="#/contact" target="_blank">contact@foreverinteractive.com</a> or our <a href="forums.visionsofzosimos.net" target="_blank">forums</a></p>
+            
+            <h3>Will VoZ be on Steam?</h3>
+            <p>This is a good question, and for right now, we honestly do not know. There are a lot of constraints with Hero Engine and how it relates to microtransactions, payments, client based downloads, etc... For obvious reasons we are actively working on resolutions to this with the hopes that upon our launch, we will be able to utilize Steam as a partner.</p>
+            
+            <h3>Does VoZ have <abbr title="Digital rights management">DRM</abbr>?</h3>
+            <p>Due to the inherent nature of the game, it requires a persistent internet connection to be able to play. When the game launches in gold status, despite the fact that it will have PvE, it will still require an internet connection. This is not due to <abbr title="Digital rights management">DRM</abbr> in the strictest sense, but rather the fact that VoZ harnesses MMO features as part of gameplay. However, considering that VoZ requires an internet connection, people may consider this a form of <abbr title="Digital rights management">DRM</abbr>.</p>
+            
+            <h3>What is a digital starter pack</h3>
+            <p>We have been getting this question a lot lately, so we decided to add it to our FAQ’s as well.Our Digital Starter Pack is essentially the same as a theme pack in Magic The Gathering. Each digital starter pack contains a pre-built themed, competitive 60 card deck which you can play straight out of the box or customize with your existing card collection. This deck guarantees you one Epic card! This is a great entry level deck to get you into the world of Visions of Zosimos and playing right away!</p>
+            
+            <h3>When will I receive my backer rewards?</h3>
+            <p>Digital backer rewards will be sent to you via email upon the release of the full game.</p>
+            
+            <p>All other rewards will be distributed between successful completion of your purchase and the release of the full game. For further questions, please contact us at <a href="#/contact" target="_blank">contact@foreverinteractive.com</a></p>
+        </div>
+    </div>
+</div>
+
+<div layout="column" id="store:rewarddetails" >
+	<div class="panel panel-voz-default">
+    	<div class="panel-heading">
+        	<h3>Founder Store: Founders Package Reward Detailss</h3>
+        </div>
+        <div class="panel-body">
+        	<h3>Unique forum avatars:</h3>
+            <p>This Unique forum avatar will consist of an image and your backer level for use within the official Visions of Zosimos forums</p>
+            
+            <h3>Digital Booster Pack:</h3>
+            <p>Each digital booster pack contains 15 randomly assorted digital cards which are added to your card collection. Use these cards to personalize your decks or trade with other 					players!</p>
+            
+            <h3>Digital Starter Pack:</h3>
+            <p>Each digital starter pack contains a pre-built themed, competitive 60 card deck which you can play straight out of the box or customize with your existing card collection. This deck guarantees you one Epic card! This is a great entry level deck to get you into the world of Visions of Zosimos and playing right away!</p>
+            
+            <h3>Digital Booster/Starter Box:</h3>
+            <p>Each digital booster box contains 36 digital booster packs (540 cards) which are unpacked individually then added to your card collection. You are also guaranteed one rare Epic bonus foil card! A box will give you will have the upper hand when it comes to customizing your decks.</p>
+            
+            <h3>Digital Dice Skin:</h3>
+            <p>This is a purely cosmetic item. It will change the appearance of your dice in-game. It will NOT change roll probability or any mechanical outcome of the dice.</p>
+            
+            <h3>Digital Homunculus Skin:</h3>
+            <p>This is a purely <strong>cosmetic item</strong>. This will change the appearance of your Homunculus in-game. This will <strong>NOT</strong> change any mechanical/gameplay aspect of your homunculus.</p>
+            
+            <h3>Digital Card Sleeves:</h3>
+            <p>This is a purely <strong>cosmetic item</strong>. This will change the appearance of the rear side of your cards in-game. This will <strong>NOT</strong> change any mechanical aspect of your deck/cards.
+            
+            <h3>Card Season 1 Pass:</h3>
+            <p>This will include 1 of each card from Release 1 of Visions of Zosimos. Note: This item will not be offered post release of the game.</p>
+            
+            <h3>Homunculus Season 1 Pass:</h3>
+            <p>This will include 1 of each Homunculus from Release 1 of Visions of Zosimos.	Note: This item will not be offered post release of the game.</p>
+            
+            <h3>All Access Season 1 Pass:</h3>
+            <p>This includes both the Card Season 1 Pass AND the Homunculus Season 1 Pass. Note: This item will not be offered post release of the game.</p>
+            
+            <h3>Digital Art Book:</h3>
+            <p>Contains concept and final art in full color. The Art of Visions of Zosimos showcases the best of the best our artists have created.</p>
+            
+            <h3>Digital Soundtrack:</h3>
+            <p>Our digital soundtrack includes all music included within the game. Both Lossless and lossy formats will be provided.</p>
+            
+            <h3>In-Game Currency Boost:</h3>
+            <p>This will increase the rate by which the player gains in-game (non-premium) currency through routine gameplay by the designated percentage. This permanent increase is stackable with any additional in-game currency boost that can be applied to your account. Note: This MSRP is based on one concurrent year of gameplay. Additionally, this item will not be offered post release of the game.</p>
+            
+            <h3>Homunculus XP Boost:</h3>
+            <p>This will increase the rate by which the players Homunculus gains experience points through routine gameplay by the designated percentage. This permanent increase is stackable with any additional experience boost that can be applied to your account. Note: This MSRP is based on one concurrent year of gameplay. Additionally, this item will not be offered post release of the game.</p>
+            
+            <h3>Shrines:</h3>
+            <p>The Shrines are an in-game visual representation of your deck and discard pile. This is a purely cosmetic item and will NOT affect any mechanical/gameplay aspect of your deck and/or discard pile.</p>
+            
+            <h3>Design Council:</h3>
+            <p>This will be a special section of the forums locked to all players other than those on the design council. This section of the forums will allow council members to, among other things, allocate votes to various design decisions during the continued development of Visions of Zosimos, thereby taking an active role in the development of the game and shaping the future VoZ. This will put our Design Council at the forefront of our open door development giving them the most power to shape our development process.</p>
+			<p>Note: Access to the design council and all of its benefits will not be offered post release of the game.</p>
+            
+            <h3>Apprentice level</h3>
+            <p><i class="fa fa-check-circle-o" ></i> The ability to allocate 1 vote per design decision during voting periods.<br/>
+         	<i class="fa fa-check-circle-o"></i> Play in-development areas of the game prior to public release.<br/>
+            <i class="fa fa-check-circle-o" ></i> Permanent 10% discount for all in-game purchases.</p>
+            <p>Additionally, Apprentice level council members gain a permanent 10% discount on premium currency purchases for the life of their account (Note: This permanent discount is stackable with any other single promotion being run at the time of the premium currency purchase. These discount percentages are calculated individually, but can be used during a simultaneous checkout).</p>
+            
+            <h3>Journeyman level</h3>
+            <p><i class="fa fa-check-circle-o" ></i> The ability to allocate 2 votes per design decision during voting periods.<br/>
+			   <i class="fa fa-check-circle-o" ></i> Play in-development areas of the game prior to public release.<br/>
+               <i class="fa fa-check-circle-o" ></i> Permanent 20% discount for all in-game purchases.
+            </p>
+            <p>Additionally, Journeyman level council members gain a permanent 20% discount on premium currency purchases for the life of their account (Note: This permanent discount is stackable with any other single promotion being run at the time of the premium currency purchase. These discount percentages are calculated individually, but can be used during a simultaneous checkout).</p>
+            
+            <h3>Master Level</h3>
+            <p><i class="fa fa-check-circle-o" ></i> The ability to allocate 3 votes per design decision during voting periods.<br/>
+			   <i class="fa fa-check-circle-o" ></i> Play in-development areas of the game prior to public release.<br/>
+               <i class="fa fa-check-circle-o" ></i> Permanent 25% discount for all in-game purchases.
+            </p>
+            <p>Additionally, Master level council members gain a permanent 25% discount on premium currency purchases for the life of their account (Note: This permanent discount is stackable with any other single promotion being run at the time of the premium currency purchase. These discount percentages are calculated individually, but can be used during a simultaneous checkout).</p>
+            
+            <h3>Immortal Level</h3>
+            <p><i class="fa fa-check-circle-o" ></i> The ability to allocate 6 votes per design decision during voting periods.<br/>
+			   <i class="fa fa-check-circle-o" ></i> Play in-development areas of the game prior to public release.<br/>
+               <i class="fa fa-check-circle-o" ></i> Permanent 35% discount for all in-game purchases.
+            </p>
+            <p>Additionally, Immortal level council members gain a permanent 35% discount on premium currency purchases for the life of their account (Note: This permanent discount is stackable with any other single promotion being run at the time of the premium currency purchase. These discount percentages are calculated individually, but can be used during a simultaneous checkout).
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Toggle Details for each of the Founders Levels -->
+<script type="text/ng-template" id="teirModal.html">
+  <div class="modal-body" id="teirModal">
+	  <div layout="row" layout-xs="column" id="teirBody" >
+	  		<div layout="column" layout-align="start center" flex="50">
+				<p>${{selectedTeir.price}} USD</p>
+				<img ng-src="{{selectedTeir.teirImage}}" class="LargeBadgeIcon"  />
+				<h3>{{selectedTeir.levelName}}</h3>
+				<p ng-show="{{selectedTeir.specialOffer}}">
+					This will be a special section of the forums locked to all players other than those on the design council. This section of the forums will allow council members to, among other things, allocate votes to various design decisions during the continued development of Visions of Zosimos, thereby taking an active role in the development of the game and shaping the future VoZ. This will put our Design Council at the forefront of our open door development giving them the most power to shape our development process. Note: Access to the design council and all of its benefits will not be offered post release of the game.
+				</p>
+			</div>
+			
+			<div layout="column" layout-align="center start" flex="50">
+				<div class="well well-lg">
+					<md-list class="md-dense" >
+						
+						<md-list-item class="md-2-line" ng-repeat="teir in selectedTeir.teirGifts track by $index">
+						  <img src="images/listIcon.png" class="md-avatar md-18" alt="icon" />
+						  <div class="md-list-item-text">
+								{{teir}}
+							
+						  </div>
+						</md-list-item>
+						
+					</md-list>
+				</div>
+			</div>
+	  </div>
+  </div>
+  <div id="teirFooter" class="modal-footer">
+  	 <md-button ng-click="AddToCart(selectedTeir.levelName,selectedTeir.price, selectedTeir.teirName )" ng-disabled="true" class="md-button md-raised md-primary">
+	 		Add To Cart
+	 </md-button>
+	 <md-button ng-click="Cancel()" class="md-button md-raised md-primary">
+	 		Close
+	 </md-button>
+  </div>
+</script>
+<!-- end of Toogle Detials --->
+
+<!-- Toggle Store Cart --->
+<script type="text/ng-template" id="cartModal.html">
+  <div class="modal-body" id="cartModal">
+	  <md-list>
+	  		<md-list-item ng-repeat="item in itemLists">
+				<md-input-container>
+					<label>Number of Copys</label>
+					<input type="number" min="1" ng-model="item.copy">
+				</md-input-container>
+				<img src="images/store/founderBadge/{{item.img}}.png" class="badgeIcon">
+				<h4>{{item.name}}</h4>
+				<div flex="auto"></div>
+				<!--(${{item.price}}.00 Per {{item.copy}} Copys)-->
+				<div flex="auto"></div>
+				<h4>${{item.copy * item.price}}.00</h4>
+				<md-button class="md-icon-button" ng-click="DeleteItem($index)">
+					<i class="fa fa-2x fa-times redText"></i>
+				</md-button>
+			</md-list-item>
+			
+	  </md-list>
+  </div>
+  <div id="cartFooter" class="modal-footer">
+  	 <h4>{{numItem}} Items</h4>
+  	 <h4>${{total}}.00 total</h4>
+  	 <md-button ng-click="CheckOut()" ng-disabled="true" class="md-button md-raised md-primary">
+	 		Check Out
+	 </md-button>
+	 <md-button ng-click="Cancel()" class="md-button md-raised md-primary">
+	 		Close
+	 </md-button>
+  </div>
+</script>
+
+<script type="text/ng-template" id="paymentOptionModal.html">
+  <div class="modal-body" id="paymentOption">
+	  <a href="#/founder" ng-click="CheckOutWith('paypal');"><div class="panel panel-voz-default ">
+	  	  <div class="panel-heading">
+		  	PayPal
+		  </div>
+	  </div></a>
+	  <a href="#/founder" ng-click="CheckOutWith('paypal');" ><div class="panel panel-voz-default ">
+	  	  <div class="panel-heading disabled">
+		  	Credit Card
+		  </div>
+	  </div></a>
+  </div>
+  <div id="paymentOptionFooter" class="modal-footer">
+	 <md-button ng-click="Cancel()" class="md-button md-raised md-primary">
+	 		Cancel
+	 </md-button>
+  </div>
+</script>
+
+<script type="text/ng-template" id="ceditCard.html">
+  <form>
+  <div class="modal-body" id="ceditCard">
+	  <div layout-gt-xs="row">
+	  		<md-input-container class="md-block" flex-gt-sm>
+				<label>First name*</label>
+				<input ng-model="payer.first" required>
+          	</md-input-container>
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Last name*</label>
+				<input ng-model="payer.last" required>
+          	</md-input-container>
+			
+	  </div>
+	  <md-input-container class="md-block">
+			  <label>Email Address*</label>
+			  <input ng-model="user.email" required>
+	  </md-input-container>
+	  <md-input-container class="md-block">
+			  <label>Address*</label>
+			  <input ng-model="user.address.line1" required>
+	  </md-input-container>
+	  <div layout-gt-xs="row">
+	  		<md-input-container class="md-block" flex-gt-sm>
+				<label>City*</label>
+				<input ng-model="payer.address.city" required>
+          	</md-input-container>
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>State</label>
+				<input ng-model="payer.address.state">
+          	</md-input-container>
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Postal Code*</label>
+				<input ng-model="payer.address.postalCode" required ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+          	</md-input-container>
+	  </div>
+  </div>
+  <div id="ceditCardFooter" class="modal-footer">
+	 <md-button ng-click="Cancel()" class="md-button md-raised md-primary">
+	 		Cancel
+	 </md-button>
+	 <md-button ng-click="CheckOutWith('card')" class="md-button md-raised md-primary">
+	 		Continue
+	 </md-button>
+  </div>
+  </form>
+</script>

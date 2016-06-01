@@ -1,0 +1,543 @@
+@charset "utf-8";
+/* CSS Document */
+
+/****************************
+	#271649 is the dark purple
+	#3C2D5B is the ligher dark purple for accent hover color
+	#FFBF00 is the amber
+	#bfb8b8 is the silver
+	
+****************************/
+
+@import url(https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700,400italic,700italic);
+
+body
+{
+	font-family: 'Archivo Narrow', sans-serif;
+	background:url(../images/dark_mosaic.jpg);
+	font-weight: bold;
+	font-size: 17px;
+}
+
+#header
+{
+	background-color: #271649;
+	width: 100%;
+	height: 150px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	z-index: 200;
+}
+
+.topBox
+{
+	padding-bottom: 15px;	
+}
+#underNav
+{
+	position:static;
+	background-color: #271649;
+	width: 100%;
+	min-height: 50px;
+	max-height: 300px;
+
+	padding-top: 5px;
+	padding-bottom: 5px;
+	z-index: 100;
+	margin-bottom: 15px;	
+}
+
+#underNav > span
+{
+	padding: 5px;
+	margin: 5px;	
+}
+
+#underNav > a
+{
+	color: #FFBF00;
+	padding: 5px;
+	margin: 5px;		
+}
+
+a:link, a:visited
+{
+	color: #FFBF00 ;	
+}
+
+footer
+{
+	margin-top: 5px;
+	height: 50px;
+	background-color: #271649;
+	
+}
+.footerLink 
+{
+	margin-top: 5px;
+	margin-right: 20px;
+	
+}
+.footerLink > a
+{
+   color: #FFBF00 !important;
+}
+
+#underNav > a > .active
+{
+	text-decoration:underline;	
+}
+
+#underNav > span[data-scrollspy-listen=code] 
+{
+  background-color: #f06060;
+}
+md-content
+{
+	background:url(../images/dark_mosaic.jpg);
+	color: #CCC;
+}
+
+.md-button
+{
+	font-size: 14px !important;
+	font-weight:bold !important;	
+}
+
+.iconSize
+{
+	font-size:24px !important;	
+}
+
+#fireWarror
+{
+	overflow:hidden;
+	width: 100%;
+	z-index:1;
+	display:block;
+	
+	
+		
+}
+
+#Eldjatnor
+{
+	overflow:hidden;
+	width: 100%;
+	z-index:1;
+	display:block;	
+}
+
+
+.vozPlay
+{
+	height: 75px;
+	width: 140px;
+	padding-top: 15px;
+	border: 3px solid #FFBF00;
+	font-size: 24px !important;
+	background-color: #271649 !important;
+	color: #FFBF00 !important;
+	font-weight: bold !important;
+}
+
+.buttonWidth
+{
+	width: 100% !important;	
+	font-size: 16px !important;
+	font-weight:bold;
+}
+
+#navBuffer
+{
+	min-height: 50px;
+	max-height: 300px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+md-list > md-list-item > a
+{
+	color: 	#FFBF00;
+}
+md-list > md-list-item > a:hover
+{
+	color: 	#ffd24d;
+}
+
+.redText
+{
+	color: 	#d9534f;
+}
+.goldText
+{
+	color: 	#FFBF00;
+}
+.silverText
+{
+	color: #bfb8b8;
+}
+
+.whiteText
+{
+	color:#FFF;	
+}
+
+.md-sidenav-right
+{
+	background-color: #271649;
+	color: 	#FFBF00;
+}
+.md-sidenav-right > md-icon.md-default-theme, md-icon
+{
+	color: 	#FFBF00;
+}
+.md-sidenav-left
+{
+	background-color: #271649;
+	color: 	#FFBF00;
+}
+
+.textBackground
+{
+	background-image:url(../images/background.jpg);
+	border: 1px solid #441154;
+	width: 	100%;
+	height: 100%;
+	padding: 10px 10px;
+	color:#CCC;	
+}
+
+.textBackground > p
+{
+	color:#CCC;	
+}
+
+.margin-5-right
+{
+	margin-right: 5px;	
+}
+.margin-10-right
+{
+	margin-right: 10px;	
+}
+.margin-5-left
+{
+	margin-left: 5px;	
+}
+.margin-15-left
+{
+	margin-left: 15px;	
+}
+.margin-150-left
+{
+	margin-left: 210px;	
+}
+.margin-5-top
+{
+	margin-top: 5px;	
+}
+.margin-5-bottom
+{
+	margin-bottom: 5px;	
+}
+
+#bottomBuffer
+{
+	height: 100px;
+}
+
+.sidenav-right
+{
+	border-left: 2px solid #FFBF00;
+}
+
+.sidenav-left
+{
+	border-right: 2px solid #FFBF00;
+}
+
+.cards
+{
+	
+	height:	 382px;	
+	background-image:url(../images/background.jpg);
+	color: #F0F7FF;
+	border: 1px solid #441154;
+}
+
+.cards > footer
+{
+	height: 48px;
+	padding-left: 33px;
+	padding-bottom: 33px;
+    background: rgba(39,22,73,1.0);
+}
+.cards > footer > h3 
+{
+	font-family: 'Archivo Narrow', sans-serif;
+	margin-top: 12px;
+}
+.cards > footer > h3 > a 
+{
+	font-family: 'Archivo Narrow', sans-serif;
+	color: #FFBF00;
+	cursor:pointer;
+}
+
+.cards > .cards-img 
+{
+	
+	margin-top: 5px;
+	overflow:hidden;
+	height: 100%;	
+}
+
+/*********************************************************
+	Servey Widget
+*********************************************************/
+
+#survey
+{
+	width:auto;
+	margin-left: 5px;
+}
+/*#servey > p
+{
+	
+	|
+*/
+
+
+/**********************************************************
+	What is VoZ
+**********************************************************/
+.vision
+{
+	width: 40%;
+	min-width: 250px;
+		
+}
+.pull-left
+{
+	padding-right: 10px;	
+}
+.pull-right
+{
+	padding-left: 10px;	
+}
+
+/**********************************************************
+	Download
+**********************************************************/
+
+#download > div
+{
+	padding: 15px;	
+}
+
+#download md-input-container.md-default-theme .md-input, md-input-container .md-input
+{
+	color: #CCC;
+	border-color: #CCC;	
+}
+
+#download md-input-container.md-default-theme .md-input, md-input-container label
+{
+	color: #CCC;
+	border-color: #CCC;	
+}
+
+#download md-input-container.md-default-theme:not(.md-input-invalid).md-input-has-value label, md-input-container:not(.md-input-invalid).md-input-has-value label 
+{
+	color: #CCC;
+}
+
+/************************************************************
+	Tutoral 
+*************************************************************/
+
+
+#flipbook-xl
+{
+	overflow:hidden;
+	width: 1864px;	
+}
+
+#flipbook-lg
+{
+	overflow:hidden;
+	width: 1224px;	
+}
+#flipbook-md
+{
+	overflow:hidden;
+	width: 943px;	
+}
+#flipbook-sm
+{
+	overflow:hidden;
+	width: 600px;	
+}
+/************************************************************
+	Founders
+*************************************************************/
+.storeCards
+{
+	background:url(../images/background.jpg);
+	color: #F0F7FF;
+	border: 1px solid #441154;
+}
+.storeCard > h3 >.md-display-1
+{
+	font-family: 'Archivo Narrow', sans-serif;
+	font-weight:700;
+}
+.badgeIcon
+{
+	width: 141px;	
+}
+.LargeBadgeIcon
+{
+	width: 193px
+}
+
+#teirModal
+{
+	color: #F0F7FF;
+	background:url(../images/background.jpg);
+	border: 1px solid #441154;
+}
+#teirFooter
+{
+	color: #F0F7FF;
+	background:url(../images/background.jpg);
+	border: 1px solid #441154;
+}
+.well
+{
+	background:url(../images/dark_mosaic.jpg);	
+	margin-left: 15px;
+}
+
+#teirModal > md-2-line
+{
+	margin: 15px;	
+}
+
+#teirModal
+{
+	overflow:auto;
+	max-height:	 400px;
+}
+#teirModal > #teirBody
+{
+	overflow:hidden;
+	
+	
+}
+
+#cartModal
+{
+	color: #F0F7FF;
+	background:url(../images/background.jpg);
+	border: 1px solid #441154;
+	overflow:auto;
+	max-height:	 400px;
+}
+#cartFooter
+{
+	color: #F0F7FF;
+	background:url(../images/background.jpg);
+	border: 1px solid #441154;
+}
+
+#cartModal > #cartBody
+{
+	overflow:hidden;
+	
+	
+}
+
+#paymentOption
+{
+	color: #F0F7FF;
+	background:url(../images/background.jpg);
+	border: 1px solid #441154;
+	overflow:auto;
+	max-height:	 400px;
+}
+#paymentOptionFooter
+{
+	color: #F0F7FF;
+	background:url(../images/background.jpg);
+	border: 1px solid #441154;
+}
+
+/***********************************************
+ 				contact
+************************************************/
+
+#email md-input-container.md-default-theme .md-input, md-input-container .md-input
+{
+	color: #CCC;
+	border-color: #CCC;	
+}
+
+#email > md-input-container > label
+{
+	color: #CCC;
+	border-color: #CCC;	
+}
+
+#email md-input-container.md-default-theme:not(.md-input-invalid).md-input-has-value label, md-input-container:not(.md-input-invalid).md-input-has-value label 
+{
+	color: #CCC;
+}
+
+#emailOption
+{
+	color: #F0F7FF;
+	background:url(../images/background.jpg);
+	border: 1px solid #441154;
+	overflow:auto;
+	max-height:	 400px;
+	height: 100%;
+}
+
+
+#emailFooter
+{
+	color: #F0F7FF;
+	background:url(../images/background.jpg);
+	border: 1px solid #441154;
+}
+
+#partner
+{
+	color: #F0F7FF;
+	background:url(../images/background.jpg);
+	border: 1px solid #441154;
+	overflow:auto;
+	max-height:	 400px;
+	height: 100%;
+}
+
+#partner md-input-container.md-default-theme:not(.md-input-invalid).md-input-has-value label, md-input-container:not(.md-input-invalid).md-input-has-value label 
+{
+	color: #CCC;
+}
+
+#partner > md-input-container.md-default-theme .md-input[disabled], md-input-container .md-input[disabled], md-input-container.md-default-theme .md-input [disabled], md-input-container .md-input [disabled]
+{
+	color: #CCC;
+	border-color: #CCC;	
+}
+
+#partnerFooter
+{
+	color: #F0F7FF;
+	background:url(../images/background.jpg);
+	
+}
