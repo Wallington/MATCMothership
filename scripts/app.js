@@ -54,72 +54,11 @@ vozApp.config(function ($routeProvider)
 		templateUrl : 'pages/home.html',
 		controller  : 'homeController'
 	})
-	
-	.when('/about',
-	{
-		templateUrl : 'pages/about.html',
-		controller  : 'aboutController'
-	})
-	.when('/new',
-	{
-		templateUrl : 'pages/new.html',
-		controller  : 'newController'
-	})
-	.when('/download',
-	{
-		templateUrl : 'pages/download.html',
-		controller  : 'downloadController'
-	})
-	.when('/cards',
-	{
-		templateUrl : 'pages/cards.html',
-		controller  : 'cardsController'
-	})
-	.when('/boards',
-	{
-		templateUrl : 'pages/boards.html',
-		controller  : 'boardsController'
-	})
-	.when('/support',
-	{
-		templateUrl : 'pages/support.html',
-		controller  : 'supportController'
-	})
-	.when('/community',
-	{
-		templateUrl : 'pages/community.html',
-		controller  : 'communityController'
-	})
-	.when('/media',
-	{
-		templateUrl : 'pages/media.html',
-		controller  : 'mediaController'
-	})
+
 	.when('/contact',
 	{
 		templateUrl : 'pages/contact.html',
 		controller  : 'contactController'
-	})
-	
-	.when('/founder',
-	{
-		templateUrl : 'pages/founder.html',
-		controller  : 'founderController'
-	})
-	.when('/founderCheckout',
-	{
-		templateUrl : 'pages/founderCheckout.php',
-		controller  : 'founderCheckoutController'
-	})
-	.when('/lore',
-	{
-		templateUrl : 'pages/lore.html',
-		controller  : 'loreController'
-	})
-	.when('/tutorials',
-	{
-		templateUrl : 'pages/tutorials.html',
-		controller  : 'tutorialsController'
 	});
 });
 //define the first and secondary nav functions
@@ -131,201 +70,22 @@ vozApp.service('Nav', function()
 	this.menuList =
 	[
 		{
-			"name" : "New",
-			"url"  : "#/new",
-			"disable" : false,
-			"subMenu" : 
-			[
-				{
-					"name" : "Cards",
-					"achLink" : "cards"
-				},
-				{
-					"name" : "Realms",
-					"achLink" : "realms"
-				}
-			]	
-		},
-		{
-			"name"   	: "about",
-			"url"   	: "#/about",
-			"disable" : false,
-			"subMenu"	:
-			[
-				{
-					"name" : "About",
-					"achLink" : "",
-					"href" : "#/about#about"
-				},
-				{
-					"name" : "Tutorials",
-					"achLink" : "",
-					"href" : "#/tutorials"
-				},
-				{
-					"name" : "Lore",				
-					"achLink" : "",
-					"href" : "#/lore"
-				}
-			]
-		},
-		{
-			"name" : "Cards",
-			"url"  : "#/cards",
-			"disable" : false,
-			"subMenu" : 
-			[
-				{
-					"name" : "Materia",
-					"achLink" : "materia"
-				},
-				{
-					"name" : "Terrain",
-					"achLink" : "terrain"
-				},
-				{
-					"name" : "Ambush",
-					"achLink" : "ambush"
-				},
-				{
-					"name" : "Glyph",
-					"achLink" : "glyph"
-				},
-				{
-					"name" : "Spell",
-					"achLink" : "spell"
-				},
-				{
-					"name" : "Enchant",
-					"achLink" : "enchant"
-				},
-				{
-					"name" : "Minion",
-					"achLink" : "minion"
-				},
-				{
-					"name" : "Boss",
-					"achLink" : "boss"
-				}
-			]
-			 
-		},
-		{
-			
-			"name" : "Boards",
-			"url"  : "#/boards",
-			"disable" : false,
-			"subMenu" :
-			[
-				{
-					"name" : "Realms",
-					"achLink" : "realms"
-				},
-				{
-					"name" : "PVP",
-					"achLink" : "pvp"
-				},
-				{
-					"name" : "PVE",
-					"achLink" : "pve"
-				},
-				{
-					"name" : "Conquest",
-					"achLink" : "conquest"
-				},
-				{
-					"name" : "Raids",
-					"achLink" : "raids"
-				}
-			] 	
-		},
-		{
-			"name"   	: "community",
-			"url"   	: "#/community",
-			"disable" : false,
-			"subMenu"	:
-			[ 
-				{
-					"name" : "Forums",
-					"achLink" : "forums",
-					"url" : 'http://forums.visionsofzosimos.net/'
-				},
-				{
-					"name" : "Blog",
-					"achLink" : "blog",
-					"url": "http://vozdevblog.blogspot.com/"
-				},
-				{
-					"name" : "Fan art",
-					"achLink" : "fanArt"
-				}
-			]	
-		},
-		{
-			"name"   	: "media",
-			"url"   	: "#/media",
-			"disable" : false,
-			"subMenu"	:
-			[
-				{
-					"name" : "News",
-					"achLink" : 'news'
-				},
-				{
-					"name" : "Video",
-					"achLink" : "video"
-				},
-				{
-					"name" : "Live!",
-					"achLink" : "live"
-				},
-				{
-					"name" : "Sketch Up",
-					"achLink" : "sketchup"
-				},
-				{
-					"name" : "Wallpaper",
-					"achLink" : "wallpaper"
-				}
-				
-			]
+			"name" : "Home",
+			"url"  : "#/"
 		}
-	]; 
+	];
 	
 	//this hold the secondary menu
-	this.subMenuList = [];
+	this.subMenuList = 
+	[
+	];
 	
 	
 	this.OpenNav = function(menuName)
 	{
 		switch(menuName) //we check the name for match if 
 		{
-			case 'new':
-				this.subMenuList = this.menuList[0].subMenu;
-				break;
-			case 'about':
-				this.subMenuList = this.menuList[1].subMenu;
-				break;
-			case 'cards':
-				this.subMenuList = this.menuList[2].subMenu;
-				console.log(this.subMenuList);
-				break;
-			case 'boards':
-				this.subMenuList = this.menuList[3].subMenu;
-				
-				break;
-			case 'community':
-				this.subMenuList = this.menuList[4].subMenu;
-				
-				break;
-			case 'media':
-				this.subMenuList = this.menuList[5].subMenu;
-				
-				break;
-			case 'support':
-				this.subMenuList = this.menuList[6].subMenu;
-				
-				break;
+			
 			default:
 				this.subMenuList ='';
 				break;
@@ -334,136 +94,6 @@ vozApp.service('Nav', function()
 		
 	}
 });
-
-//define for the shop.
-vozApp.service ('Store', function($http, $window)
-{
-	this.item = [];
-	this.itemCount = 0;
-	
-	this.payer =
-	{
-		card : '',
-		type : '',
-		email: '',
-		exMonth : null,
-		exYear	: null,
-		cvv2    : '',
-		first   : '',
-		last    : '',
-		address : 
-		{
-			line1 : '',
-			city : '',
-			country : '',
-			postalCode : '',
-			state : ''
-		},
-		state   : '',
-		validUntil : ''
-	}
-	
-	//this add items to the shoping card
-	this.AddItem = function(itemName, itemPrice, elementCodeName)
-	{ 	
-	  if(this.item.length == 0)  //check if cart has any item start off if not is true
-	  {
-		 this.item.push
-		  (
-			  {
-				  copy: 1, //how many copy of the founder code
-				  name : itemName, //get the name
-				  price : itemPrice, //get the price
-				  img: elementCodeName //get name of image
-			  }
-		  );
-		  this.itemCount++;  
-	  }
-	  else //if cart does have item then were see if there duplicated item
-	  {
-		   for(var i = 0; i < this.item.length; i++)
-		   {
-			   //console.log("start of loop");
-			   //console.log("input name: " + itemName)
-			   //console.log("loop name: " + this.item[i].name);
-				if(itemName == this.item[i].name)
-				{
-					//console.log("found duplicates in the loop");
-					this.item[i].copy++; //incress the number of copys of this item then break from loop
-					//console.log("duplication side");
-					this.itemCount++;
-					break;
-						
-				}
-				else //if not then like the top where pop new segment into it.
-				{
-					//console.log("found non duplicates in the loop");
-					this.item.push
-					(
-						{
-							copy: 1, //how many copy of the founder code
-							name : itemName, //get the name
-							price : itemPrice, //get the price
-							img: elementCodeName //get name of image
-						}
-					);
-					this.itemCount++;
-					break;  	
-				}
-		   }
-		   
-	  }
-	  
-   }
-	
-	
-	 this.CalulateTotal = function()
-	  {
-		 var totalPrice = 0; //clean total set at zero
-		 for(var i = 0; i < this.item.length; i++) //for each item we want get each copy * set cost price
-		 {
-			 totalPrice += (this.item[i].copy * this.item[i].price);
-		 }
-		 return totalPrice;
-	  }
-	 this.UpdateItem = function()
-	 {
-		 this.itemCount= 0; //clean total set at zero
-		 for(var i = 0; i < this.item.length; i++) //for each item we want get each copy * set cost price
-		 {
-			 this.itemCount += this.item[i].copy;
-		 } 
-	 }
-	
-	this.RemoveItem = function(itemId)
-	{
-		if(this.item.length != 1) //if not last item in list 
-		{
-			this.item.splice(itemId,1)
-		}
-		else
-		{
-			this.item.pop();	
-		}
-		
-	}
-	
-	
-	this.CheckOut = function(method) //method is the key which check out should open and load to proccess the order
-	{
-		if(method == 'paypal')
-		{
-			$window.open('php/createPayPalPayment.php?items=' + JSON.stringify(this.item), "_blank");
-		}
-	}
-	
-	this.Clear = function()
-	{
-		this.item = [];
-		this.itemCount = 0;	
-	}
-});
-
 
 //define the mainController 
 vozApp.controller('mainController',function($scope, $mdSidenav, $window, Nav, $location, $anchorScroll)
@@ -487,32 +117,32 @@ vozApp.controller('mainController',function($scope, $mdSidenav, $window, Nav, $l
 		{
 			'icon' : 'fa fa-2x fa-facebook',
 			'name' : 'Facebook',
-			'url'  : 'https://www.facebook.com/VisionsofZosimos?fref=ts' 
+			'url'  : '#' 
 		},
 		{
 			'icon' : 'fa fa-2x fa-google-plus',
 			'name' : 'Google Plus',
-			'url'  : 'https://plus.google.com/+VisionsOfZosimosNet' 
+			'url'  : '#' 
 		},
 		{
 			'icon' : 'fa fa-2x fa-tumblr',
 			'name' : 'Tumblr',
-			'url'  : 'http://visionsofzosimos.tumblr.com/' 
+			'url'  : '#' 
 		},
 		{
 			'icon' : 'fa fa-2x fa-twitter',
 			'name' : 'Twitter',
-			'url'  : 'https://twitter.com/VoZCCG' 
+			'url'  : '#' 
 		},
 		{
 			'icon' : 'fa fa-2x fa-youtube',
 			'name' : 'Youtube',
-			'url'  : 'https://www.youtube.com/channel/UCCJeVduLe44tjWt8l5ZZjEw' 
+			'url'  : '#' 
 		},
 		{
 			'icon' : 'fa fa-2x fa-twitch',
 			'name' : 'Twitch',
-			'url'  : 'https://www.twitch.tv/visionsofzosimos/' 
+			'url'  : '#' 
 		}
 	];
 	
@@ -537,22 +167,6 @@ vozApp.controller('mainController',function($scope, $mdSidenav, $window, Nav, $l
 		$scope.isNavOpen = Nav.isNavOpen;
 	}
 	
-	$scope.GoToAch = function(archTag)
-	{
-		if( archTag == 'forums')
-		{
-			$window.open('http://forums.visionsofzosimos.net/', "_blank");
-		}
-		else if(archTag == 'blog')
-		{
-			$window.open('http://vozdevblog.blogspot.com/', "_blank");
-		}
-		else
-		{
-			$location.hash(archTag);
-			$anchorScroll();
-		}
-	}
 	
 	$scope.GoToTop = function()
 	{
@@ -605,7 +219,7 @@ vozApp.controller('homeController', function($scope, $http, Nav)
 	},
 	function errorCallback(response)
 	{
-		console.log("ERROR");
+		console.log("ERROR: Can not find JSON File");
 	});
 	
 	$scope.Submit = function(htmlForm)
@@ -647,9 +261,9 @@ vozApp.controller('homeCarousel', function($scope) //this controlls the home sli
 {
 	$scope.slides =
 	[
-		'images/IndieGoGoBanner.png', //slide 1
-		'images/GenConBanner.png', //slide 2
-		'images/eldjotnar.jpg' //slide 3, end of slides
+		'images/tempMainGraphic.png', //slide 1
+		'images/tempMainGraphic.png', //slide 2
+		'images/tempMainGraphic.png' //slide 3, end of slides
 	]
 	
 });

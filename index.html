@@ -18,22 +18,15 @@
 <body ng-controller="mainController" >
 	<div  layout="column" layout-fill>
 		<div layout="row" layout-align="start center" id="header">
-            <img src="images/VoZ_Logo.png" class="img-responsive">
-            <md-button class="md-button md-raised vozPlay" ng-href="#/download">
-				PLAY FREE!
-			</md-button>
+            <img src="images/templogo.png" class="img-responsive">
+            
 			<div flex></div>
             
             <div id="nav">
                 <div hide-gt-md show-lg show-xl hide-sm hide-xs layout="row" layout-align="center center">
-                    <md-button class="md-button md-raised md-primary" ng-href="#/">
-                        Home
-                    </md-button> 
+                    
                     <md-button ng-repeat="menu in menuList" class="md-button md-raised md-primary" ng-disabled="menu.disable" ng-click="GoToTop()" ng-href="{{menu.url}}">
                           {{menu.name}}
-                    </md-button>
-                    <md-button class="md-button md-raised md-primary" ng-href="#/founder">
-                        Founders
                     </md-button>
                     
                 </div>
@@ -57,7 +50,6 @@
             
         </div>
 		<div hide-xs><p class="md-title goldText margin-150-left">
-        	STRATEGIC MMOCCG
         </p></div>
         <div layout="row" layout-align="center center" layout-xs="column" id="underNav" layout-wrap >
 				
@@ -114,7 +106,7 @@
     </md-sidenav>
     <md-sidenav class="md-sidenav-right sidenav-right" md-component-id="right">
        	 <div layout="column" layout-align="center center" >
-              <img src="images/VoZ_Logo.png">
+              <img src="images/templogo.png">
               <md-button class="md-button" ng-repeat="social in socialList" ng-click="Tab(social.url)">
                     <i class="{{social.icon}} iconSize"></i>
                     <span> {{social.name}}</span>
@@ -132,8 +124,6 @@
    <!-- Angular Material Library -->
    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
 
-  <script src="scripts/jquery-1.12.3.min.js"></script>
-   <script src="scripts/turn.js"></script>
    <script src="scripts/app.js"></script>
    <script src="scripts/ui-bootstrap.js"></script>
    
